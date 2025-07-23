@@ -1,0 +1,38 @@
+sudo subscription-manager register --username=<your_Red_Hat_Username> --password=<your_Red_Hat_Password>
+
+dnf install -y ncurses
+
+sudo subscription-manager attach --auto
+
+
+sudo subscription-manager list --available
+
+
+sudo subscription-manager status
+
+
+sudo subscription-manager list --consumed
+
+sudo subscription-manager unregister
+
+
+sudo subscription-manager refresh
+
+
+sudo subscription-manager clean
+
+
+sudo subscription-manager release --set=9.2
+
+sudo subscription-manager release --show
+
+
+sudo subscription-manager release --unset
+
+
+sudo subscription-manager repos --list
+
+sudo subscription-manager repos --enable=rhel-9-for-x86_64-baseos-rpms
+
+sudo subscription-manager repos --disable=rhel-9-for-x86_64-baseos-rpms
+
