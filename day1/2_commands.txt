@@ -1,0 +1,11 @@
+whoami
+
+
+date
+
+date "+%Y-%m-%d %H:%M:%S"
+
+date -u
+
+man ls
+
