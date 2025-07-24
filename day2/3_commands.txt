@@ -1,0 +1,137 @@
+#################################################################################
+
+cat noexist.txt
+
+cat notexists.txt 2> errorfile
+
+cat errorfile
+
+cat notexists2.txt 2> errorfile
+cat errorfile
+
+cat notexists.txt 2> /dev/null
+
+cat notexists.txt 1> catfile 2> errorfile
+
+cat notexists.txt > capture.txt 2>&1
+
+cat .profile > capture.txt 2>&1
+
+systemctl status cron.service
+
+ps aux | grep cron
+ls -al /etc/crontab
+
+ls -al /etc/cron.d
+ls -al /etc/cron.* -d
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *    * * *   root    cd / && run-parts --report /etc/cron.hourly
+
+
+
+crontab -l
+
+crontab -e
+
+12 9 23 * * /usr/bin/ls -al > logfile 2>&1
+
+
+crontab -l
+
+* * * * *
+
+ls -al /var/spool/cron/crontabs/root
+
+cat /var/log/syslog
+
+journalctl -u cron
+
+systemctl status cron.service
+
+######################################################################################################
+
+mkdir source target
+touch source/file1
+touch source/file2
+echo 'hello!'> source/file1
+echo 'hello!'> source/file2
+cd target
+
+
+ln SOURCE TARGET
+
+ln -s SOURCE TARGET
+
+cat ../source/file1
+
+ln -s ../source/file1 softlink
+
+ls -al
+
+ln -s /root/source/file1 softlink2
+
+ls -al
+cat softlink
+echo 'change to origin' >> /root/source/file1
+echo 'change to softlink' >> softlink
+echo 'change to softlink2' >> softlink2
+
+cat softlink2
+
+ls -il ../source/file1
+ls -il
+file softlink
+stat ../source/file1
+
+unlink LINK
+
+unlink softlink2
+ls -al
+
+
+rm ../source/file1
+
+#####################################################################################################
+
+
+echo "Hello from original file" > original.txt
+ln original.txt hardlink.txt
+cat hardlink.txt
+cat original.txt
+
+ln -s original.txt softlink.txt
+cat softlink.txt
+
+
+rm original.txt
+################################################################################################
+
+
+echo "hello inode" > file1.txt
+
+ls -i file1.txt
+
+ls -i file1.txt
+
+ln file1.txt file2.txt
+
+ls -i file1.txt file2.txt
+ln -s file1.txt symlink.txt
+
+
+ls -i file1.txt symlink.txt
+
+########################################################################
+
+
+
+
+

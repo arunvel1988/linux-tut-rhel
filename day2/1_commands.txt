@@ -1,0 +1,126 @@
+#################################################################################################################
+whoami
+
+id
+
+
+id rhel
+
+UID 0 is reserved for root.
+1-99 are reserved for predefined accounts (like games, mail, www-data, sys, bin and more)
+100-999 reserved for system and administrative accounts.
+1000+ are reserved for users
+
+GID 0 is reserved for root.
+1-99 are reserved for system and application use.
+100+ are for users
+
+
+clear && cat /etc/passwd
+
+
+cat /etc/shells
+
+clear && cat /etc/shadow
+
+clear && cat /etc/group
+
+/etc/gshadow
+
+clear && cat /etc/gshadow
+
+whatis useradd
+
+whatis adduser
+
+which useradd
+
+which adduser
+
+file $(which useradd)
+
+useradd testuser1
+
+adduser testuser2
+
+grep testuser /etc/passwd
+
+We see something similar to this:
+testuser1:x:1001:1001::/home/testuser1:/bin/sh
+testuser2:x:1002:1002:Some test user,,,,other info:/home/testuser2:/bin/bash
+
+
+grep testuser /etc/shadow
+
+
+testuser1:!:19002:0:99999:7:::
+testuser2:$6$4MrAXI/aJY1cfwDU$kVdzcVnA1kT3CtZa4U/R0A0IiIta0QMG8psxc1PKk48DvZllXrecwNJ7Yfxr5xpJ4GAyAb/vjBYMAwnquYyKS.:19002:0:99999:7:::
+
+
+
+-d - create home directory in specified location, if we want to change
+
+-m - create the home directory
+
+-p - password
+
+-s - provide shell
+
+-c - comments, or description of the account
+
+
+useradd -h 
+
+
+useradd testuser3 -s /bin/bash -m
+
+grep testuser /etc/passwd
+
+grep testuser /etc/shadow
+
+ls -l /home
+
+grep testuser3 /etc/shadow
+
+passwd testuser3
+
+grep testuser3 /etc/shadow
+
+
+usermod testuser3 -g testuser2
+
+grep testuser3 /etc/passwd
+
+grep testuser3 /etc/group
+
+usermod testuser3 -g 1001
+
+grep testuser3 /etc/passwd
+
+grep testuser3 /etc/group
+
+usermod testuser3 -g 1003
+
+usermod testuser3 -aG 1001
+
+usermod testuser3 -d /home/anotherdir
+
+grep testuser3 /etc/passwd 
+
+usermod testuser3 -d /home/newdir -m
+
+grep testuser3 /etc/passwd
+
+usermod testuser3 -s /bin/sh
+grep testuser3 /etc/passwd
+
+userdel testuser1
+
+grep testuser /etc/passwd
+
+grep testuser /etc/group
+
+userdel -rf testuser3
+
+###################################################################################################
+

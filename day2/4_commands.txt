@@ -1,0 +1,54 @@
+#######################################################################################
+
+file type
+
+- - normal, regular file
+d - directory
+l - soft (symbolic) link
+b - block special file (like hard drive)
+c - character special file (like /dev/null)
+n - network file
+p - FIFO
+s - socket
+
+
+ugo
+
+rwx 
+
+
+u	Owner
+g	Group
+o	Other
+a	all (owner, group and others)
+
+
+chmod 640 file.txt
+
+
+touch demo.txt
+
+chmod u=rw,g=r,o= demo.txt
+
+ls -l demo.txt
+
+sudo chgrp <group_name> demo.txt
+
+
+chmod g+w demo.txt  # add write to group
+chmod o-r demo.txt  # remove read from others
+chmod u=rw demo.txt # set exact user perms to read/write
+############################################################################################
+
+# Step 1: Create a file
+touch file1.txt
+
+# Step 2: Check current ownership
+ls -l file1.txt
+
+sudo chown user2 file1.txt
+
+sudo chown :devteam file1.txt
+
+##########################################################################################
+
