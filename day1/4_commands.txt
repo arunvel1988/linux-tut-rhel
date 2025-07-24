@@ -1,0 +1,88 @@
+###############################################################################################
+
+
+cp source target
+
+mkdir targetdir
+
+cd sourcedir
+
+cp one ../targetdir
+
+ls -l ../targetdir/one 
+ls -l one
+
+cp one ../targetdir/another-one
+
+ls -l ../targetdir
+
+cp file1tocopy file2copy file3tocopy targetlocation
+
+cp two01 two02 ../targetdi
+
+
+man 7 glob
+
+ls -l three*
+
+ls -l three*
+
+cp three0? ../targetdir
+
+ls -l ../targetdir/three*
+
+ls -l ../targetdir/three* | wc -l
+
+cp -R sourcedir anotherdir
+
+ls -l anotherdir
+
+mkdir testdir
+
+cp -R sourcedir testdir
+
+ls -l testdir
+
+
+ls -l testdir/*
+
+mkdir movedfiles
+
+ls -l sourcedir/one
+mv sourcedir/one movedfiles
+ls -l sourcedir/one
+ls -l movedfiles
+
+ls -l anotherdir/one
+mv anotherdir/one movedfiles/another-one
+ls -l anotherdir/one
+ls -l movedfiles
+
+mv file1 file2 file3 targetlocation
+
+mv sourcedir/two01 sourcedir/two02 movedfiles
+ls -l movedfile
+
+
+mv anotherdir newdir
+ls -l anotherdir
+ls -l newdir
+
+mv newdir movedfiles
+ls -l newdir
+ls -l movedfiles
+ls -l movedfiles/newdir
+
+ls -l newfilewithcontent.txt
+
+cat .profile > newfilewithcontent.txt
+
+ls -l newfilewithcontent.txt
+
+cat .profile
+
+cat newfilewithcontent.txt
+
+diff .profile newfilewithcontent.txt
+
+#################################################################################################

@@ -1,0 +1,99 @@
+#############################################################################################################################
+
+grep. This command search for given pattern in the output
+
+command1 | command2
+
+command1 | command2 | command3
+
+cat numbers.txt
+
+cat numbers.txt | wc -l
+
+cat numbers.txt | uniq |wc -l
+
+cat numbers.txt | sort | uniq | wc -
+
+ls -al > directorylist.txt
+
+cat directorylist.txt
+
+cat .profile > directorylist.txt
+
+cat directorylist.txt
+
+rm directorylist.txt 
+
+cat .profile > directorylist.txt
+
+
+echo 'this line is a separator!' >> directorylist.txt
+
+ls -al >> directorylist.txt
+
+cat directorylist.txt
+
+cat numbers.txt
+
+cat numbers.txt | wc -l 
+
+
+wc -l numbers.txt
+
+wc -l numbers.txt | awk '{print $1}'
+
+awk 'END{print NR}' numbers.txt
+
+wc -l < numbers.txt
+
+
+wc -l < numbers.txt > count.txt
+
+cat count.txt
+
+sort < numbers.txt | uniq 
+
+
+while read line; do echo "Content of the line: ${line}"; done < numbers.txt
+
+####################################################################################################
+
+ls -l testfile
+
+file testfile
+
+cat testfile
+
+ESC we switch between modes in vim. One is INSERT mode. In this mode we can edit the file. Second is COMMAND mode, where we can interact with vim and do actions. Like save and quit. Third mode is VISUAL. in this mode we can do selection of text.
+
+
+vim testfile
+
+view testfile
+
+
+more testfile
+
+less testfile
+/Resolution
+By n and N we go through search results, down and upwards.In order to quit, press q
+
+
+cat testfile | more
+
+head testfile
+head -n2 testfile
+head -n22 testfile
+
+test testfile
+test -n2 testfile
+test -n22 testfile
+
+
+cat testfile | tail -n1
+
+cat testfile | head
+
+cat testfile | head -n4 | tail -n2
+
+###################################################################################################################
