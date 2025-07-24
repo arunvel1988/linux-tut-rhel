@@ -9,3 +9,79 @@ date -u
 
 man ls
 
+############################################################################
+ls
+ls --color=no
+
+ls --color=yes
+ls -l 
+ls -n
+ls -a
+ls .
+ls ..
+ls -A 
+ls -al
+ls -lt (last modified)
+ls -s 
+ls -ls
+ls -ltr
+
+###################################################################################################
+man man 
+man ls
+man -f ls
+man intro
+man 1 intro
+man -k ls
+man -f ls
+
+###################################################################################################
+
+ls -l
+mkdir test
+mkdir testdir{1..10}
+mkdir mydirectory anotherdirectory thirddirectory
+mkdir -p parentdir/childdir{01..100}
+ls -l parentdir
+cd parentdir
+ls
+pwd
+cd .
+cd ..
+cd parentdir/childdir023
+cd ../..
+cd $HOME
+cd ~
+cd /
+cd ../../../var/log/nginx
+cd /var/log/nginx
+
+rmdir testdir{1..10}
+rmdir parentdir (CANNOT REMOVE)
+rmdir -p parentdir
+rmdir parentdir/*
+rm -rf anotherparentdir
+
+###################################################################################################
+
+
+touch testfile
+
+ls -l testfile
+touch my{01..100}file
+ls my*file
+touch try1 try2 try01
+ls try*
+ls try?
+mkdir testdir
+touch testdir/mytest{01..1000} 
+testdir/file{01..1000}
+rm testdir/mytest{01..1000}
+rm -rf testdir
+
+
+vim mynewfile
+
+ls -l mynewfile
+
+###############################################################################################################################
